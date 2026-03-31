@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Powerlifting Log</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Powerlifting Log</h1>
+        <p>Track your 3x5 bench, squat, and deadlift sessions.</p>
+      </header>
+
+      <section class="card">
+        <h2>Log Workout</h2>
+        <form id="workout-form">
+          <label>
+            Date
+            <input id="date" name="date" type="date" required />
+          </label>
+
+          <div class="grid">
+            <label>
+              Bench (kg)
+              <input id="bench" name="bench" type="number" min="0" step="0.5" required />
+            </label>
+            <label>
+              Squat (kg)
+              <input id="squat" name="squat" type="number" min="0" step="0.5" required />
+            </label>
+            <label>
+              Deadlift (kg)
+              <input id="deadlift" name="deadlift" type="number" min="0" step="0.5" required />
+            </label>
+          </div>
+
+          <p class="hint">All lifts are tracked as 3x5.</p>
+          <button type="submit">Save Workout</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Personal Records (3x5)</h2>
+        <div class="pr-grid">
+          <article>
+            <h3>Bench</h3>
+            <p id="pr-bench">-</p>
+          </article>
+          <article>
+            <h3>Squat</h3>
+            <p id="pr-squat">-</p>
+          </article>
+          <article>
+            <h3>Deadlift</h3>
+            <p id="pr-deadlift">-</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="history-header">
+          <h2>Workout History</h2>
+          <button id="clear" type="button" class="danger">Clear All</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Bench (3x5)</th>
+                <th>Squat (3x5)</th>
+                <th>Deadlift (3x5)</th>
+              </tr>
+            </thead>
+            <tbody id="history"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
