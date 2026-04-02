@@ -60,6 +60,20 @@
       </section>
 
       <section class="card">
+        <h2>Progress Graph</h2>
+        <p class="hint">Date on X-axis, weight on Y-axis.</p>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch swatch-bench"></span>Bench</span>
+          <span class="legend-item"><span class="swatch swatch-squat"></span>Squat</span>
+          <span class="legend-item"><span class="swatch swatch-deadlift"></span>Deadlift</span>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="progress-chart" width="860" height="360" aria-label="Workout progress chart"></canvas>
+          <p id="chart-empty" class="chart-empty" hidden>Add your first workout to see the graph.</p>
+        </div>
+      </section>
+
+      <section class="card">
         <div class="history-header">
           <h2>Workout History</h2>
           <button id="clear" type="button" class="danger">Clear All</button>

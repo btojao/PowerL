@@ -6,6 +6,9 @@
   --accent: #0f766e;
   --danger: #b91c1c;
   --border: #e2e8f0;
+  --bench: #1d4ed8;
+  --squat: #0f766e;
+  --deadlift: #b45309;
 }
 
 * {
@@ -114,6 +117,67 @@ button:hover {
   margin: 0.35rem 0 0;
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+.legend {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.swatch-bench {
+  background: var(--bench);
+}
+
+.swatch-squat {
+  background: var(--squat);
+}
+
+.swatch-deadlift {
+  background: var(--deadlift);
+}
+
+.chart-wrap {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fcfdff;
+  padding: 0.35rem;
+}
+
+#progress-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.chart-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-weight: 600;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
 }
 
 .history-header {
